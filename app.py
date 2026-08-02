@@ -11,6 +11,8 @@ model=load_model("best_next_word_model.keras")
 with open('tokenizer.pickle','rb') as handle:
     tokenizer=pickle.load(handle)
 
+max_sequence_len=14
+
 # Function to predict the next word
 def predict_top_words(model, tokenizer, text, max_sequence_len, top_k=5):
 
